@@ -64,8 +64,12 @@
   <p>
   Inspired by general time-series forecasting models, this study introducing global token for each epoch of different modalities to reconcile information between different signal type. Considering the variability in bio-signals, behaviour of attention mechanism in traditional transformer, background noise and artifacts, differential attention mechanism was designed in the architecture to suppress the attention noise and increase signal-to-noise (SNR) ratio. To closely matched with real-world clinical application, the model learns domain invariant features through features alignment using statistical approach between different training datasets with different distribution to generalize well on target dataset, which are not seen by model. The model was validated on 5 different sleep staging datasets, surpassing the performance of state-of-the-art.</p>
   </body>     
-
-
+  
+  <h2>Overall Framework</h2>
+  
+  <p>
+  The model takes EEG and EOG signals as input, extracts features through a differential transformer with global tokens, aligns them at both sequence and epoch levels, and performs sleep stage classification and reconstruction jointly.
+  
   <!-- Experimental Section -->
   <h2>Experimental evidences</h2>
   <p>
@@ -74,15 +78,6 @@
   </p>
   
   <img src="figures/result.png" alt="Table 1" style="max-width:75%; margin-top:20px;">
-
-  <h2>Overall Framework</h2>
-  
-  <p>
-  The model takes EEG and EOG signals as input, extracts features through a differential transformer with global tokens, aligns them at both sequence and epoch levels, and performs sleep stage classification and reconstruction jointly.
-  
-  <p align="center">
-    <img src="figures/general.png" alt="Model Framework" width="700">
-  </p>
 
   
   <!-- BibTeX Section -->
